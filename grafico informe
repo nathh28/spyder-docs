@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Definir el rango de x
+x = np.linspace(-3, 3, 400)
+
+# Definir la ecuación de la catenaria
+a = 1
+y = a * np.cosh(x / a)
+
+# Graficar la catenaria
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='Catenaria: y = cosh(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Arco de Catenaria')
+plt.grid(True)
+plt.axhline(0, color='black',linewidth=0.5)
+plt.axvline(0, color='black',linewidth=0.5)
+plt.legend()
+plt.show()
